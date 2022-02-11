@@ -1,1 +1,3 @@
-<button type="button" class="btn btn-danger">Hallo Welt</button>
+<button type="button" class="btn btn-success" (click)="getCountries()">All Countries</button>
+<input #countryNameInput>
+<button type="button" class="btn btn-secondary" (click)="getCitiesByCountryName(countryNameInput.value.trim())">All Cities</button>
