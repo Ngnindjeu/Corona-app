@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CountryService} from "./services/country.service";
 import {CountryModelResponse} from "./models/responses/country.model.response";
+import {CovidService} from "./services/covid.service";
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,14 @@ export class AppComponent {
   title = 'corona-app';
   countries: CountryModelResponse[] = [];
 
-  constructor(private countryService: CountryService) {
+  constructor(private countryService: CountryService, private covidService: CovidService) {
     this.countryService.getAccessToken();
+    this.covidService.covidHistoryEmitter.subscribe(covidCountryHistory=>{
+      console.log(covidCountryHistory);
+    });
+    this.covidService.covidCountryInfosEmitter.subscribe(info=>{
+      console.log(info);
+    })
   }
 
   getCountries() {
@@ -23,8 +30,12 @@ export class AppComponent {
   }
   getCitiesByCountryName(countryName:string)
   {
-    this.countryService.getCitiesByCountryName(countryName).subscribe(cities=>{
-      console.log(cities);
-    })
+    this.covidService.pullCovidHistoryByCountry(countryName);//.subscribe(data=>{
+/*      console.log(data);
+    },
+      error=>{
+      console.log("Error !!!!!!!\n");
+      console.log(error);
+      })*/
   }
 }

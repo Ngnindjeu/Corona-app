@@ -24,10 +24,10 @@ export class CountryService {
   public getAccessToken(): void {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Accept', 'application/json')
-      .set('api-token', environment.API_TOKEN)
-      .set('user-email', environment.userEmail);
+      .set('api-token', environment.COUNTRY_API_TOKEN)
+      .set('user-email', environment.COUNTRY_userEmail);
 
-    this.httpClient.get<AuthModelResponse>(environment.basisUrl + '/getaccesstoken', {headers: headers}).subscribe(response => {
+    this.httpClient.get<AuthModelResponse>(environment.COUNTRY_basisUrl + '/getaccesstoken', {headers: headers}).subscribe(response => {
       this.accessToken = response.auth_token;
     });
   }
@@ -39,20 +39,20 @@ export class CountryService {
   public getCountries(): Observable<CountryModelResponse[]> {
     if (!this.isAuthenticated) return new Observable<CountryModelResponse[]>();
     let headers: HttpHeaders = this.prefillHeaders();
-    return this.httpClient.get<CountryModelResponse[]>(environment.basisUrl + '/countries', {headers: headers});
+    return this.httpClient.get<CountryModelResponse[]>(environment.COUNTRY_basisUrl + '/countries', {headers: headers});
   }
 
   public getStatesByCountryName(countryName: string): Observable<StateModelResponse[]> {
     if (!this.isAuthenticated) return new Observable<StateModelResponse[]>();
     let headers: HttpHeaders = this.prefillHeaders();
-    return this.httpClient.get<StateModelResponse[]>(environment.basisUrl + '/states/' + countryName, {headers: headers});
+    return this.httpClient.get<StateModelResponse[]>(environment.COUNTRY_basisUrl + '/states/' + countryName, {headers: headers});
 
   }
 
   public getCitiesByStateName(stateName: string): Observable<CityModelResponse[]> {
     if (!this.isAuthenticated) return new Observable<CityModelResponse[]>();
     let headers: HttpHeaders = this.prefillHeaders();
-    return this.httpClient.get<CityModelResponse[]>(environment.basisUrl + '/cities/' + stateName, {headers: headers});
+    return this.httpClient.get<CityModelResponse[]>(environment.COUNTRY_basisUrl + '/cities/' + stateName, {headers: headers});
 
   }
 

@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CountryService} from "./services/country.service";
+import {CovidService} from "./services/covid.service";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import {CountryService} from "./services/country.service";
     HttpClientModule,
     BrowserModule
   ],
-  providers: [CountryService],
+  providers: [CountryService, CovidService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
