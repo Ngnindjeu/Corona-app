@@ -1,0 +1,35 @@
+<p class="h1">Gesamte Infos nach Ländern</p>
+<br>
+
+<table class="table table-responsive-md">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Flagge</th>
+    <th scope="col">Name</th>
+    <th scope="col">Gesamte Fälle</th>
+    <th scope="col">Genesene</th>
+    <th scope="col">Gestorbene</th>
+    <th scope="col">Bevölkerung</th>
+    <th scope="col">Kontinent</th>
+    <th scope="col">Aktion</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let covidCountryAllInfos of covidAllInfos; let i = index;">
+    <th scope="row">{{i + 1}}</th>
+    <td>
+      <img src="{{covidCountryAllInfos.countryInfo.flag}}" class="img-fluid img-thumbnail icon-image">
+    </td>
+    <td>{{covidCountryAllInfos.country}}</td>
+    <td>{{covidCountryAllInfos.cases}}</td>
+    <td>{{covidCountryAllInfos.recovered}}</td>
+    <td>{{covidCountryAllInfos.deaths}}</td>
+    <td>{{covidCountryAllInfos.population}}</td>
+    <td>{{covidCountryAllInfos.continent}}</td>
+    <td><button type="button" class="btn btn-primary" (click)="showHistory(covidCountryAllInfos.country)">Historie anzeigen</button></td>
+  </tr>
+
+  </tbody>
+</table>
+

@@ -26,36 +26,3 @@ export class CovidCountryAllModelResponse {
   }
 
 }
-
-'{\n' +
-'  "updated": 1645301418975,\n' +
-'  "country": "Cameroon",\n' +
-'  "countryInfo": {\n' +
-'    "_id": 120,\n' +
-'    "iso2": "CM",\n' +
-'    "iso3": "CMR",\n' +
-'    "lat": 6,\n' +
-'    "long": 12,\n' +
-'    "flag": "https://disease.sh/assets/img/flags/cm.png"\n' +
-'  },\n' +
-'  "cases": 119107,\n' +
-'  "todayCases": 0,\n' +
-'  "deaths": 1920,\n' +
-'  "todayDeaths": 0,\n' +
-'  "recovered": 106050,\n' +
-'  "todayRecovered": 0,\n' +
-'  "active": 11137,\n' +
-'  "critical": 13,\n' +
-'  "casesPerOneMillion": 4312,\n' +
-'  "deathsPerOneMillion": 70,\n' +
-'  "tests": 1751774,\n' +
-'  "testsPerOneMillion": 63419,\n' +
-'  "population": 27622124,\n' +
-'  "continent": "Africa",\n' +
-'  "oneCasePerPeople": 232,\n' +
-'  "oneDeathPerPeople": 14387,\n' +
-'  "oneTestPerPeople": 16,\n' +
-'  "activePerOneMillion": 403.19,\n' +
-'  "recoveredPerOneMillion": 3839.31,\n' +
-'  "criticalPerOneMillion": 0.47\n' +
-'}'
