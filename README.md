@@ -1,22 +1,24 @@
-#Vorstellung der APP
+# Vorstellung der APP
+
 **Corona-History-App** ist eine Webanwendung zur Visualisierung der Verläufe von Corona-Fällen der letzten 30 Tage angefangen mit dem Tag vor dem aktuellen Tag.
 
-#Installation
+# Installation
+
 Die App wurde mit Angular  entwickelt und das Frontend mit Bootstrap 4.6 entworfen.
 Sollte der Ordner `corona-app/node_modules` nicht zu finden sein, muss mit dem Befehl `npm install `neu generiert werden.
 
 Der Source-Code wurde mit der IDE Webstorm geschrieben, es kann jedoch mit anderen gängigen IDEs geöffnet werden.
 
-#Starten
+# Starten
 Die App kann mit dem Befehl `ng serve` gestartet werden und ist nach erfolgreichem Start über die URL   `http://localhost:4200/`  ansprechbar.
 Sollte der Port 4200 schon besetzt sein, dann wird in der Konsole vorgeschlagen, einen neu zufällig generierten Port zu nutzen.
 
 
-#Externe Abhängigkeiten
+# Externe Abhängigkeiten
 - Die Länder-Informationen werden von der konstenlosen Unviversal-Rest-API : https://www.universal-tutorial.com/rest-apis/free-rest-api-for-country-state-city
 - Die Corona--Informationen werden von der konstenlosen Unviversal-Rest-API : https://disease.sh/docs/
 
-#Beispiel-Seiten
+# Beispiel-Seiten
 
 
 - Standardmäßig wird die Startseit bzw. die History-Seite (**ohne Angabe des Landes** [`/history`]) zur Historie-Seite mit **_Cameroon_** (`/history/Cameroon`) als Land-Angabe umgeleitet.
