@@ -13,22 +13,22 @@ Sollte der Port 4200 schon besetzt sein, dann wird in der Konsole vorgeschlagen,
 
 
 #Externe Abhängigkeiten
-Die Länder-Informationen werden von der konstenlosen Unviversal-Rest-API : https://www.universal-tutorial.com/rest-apis/free-rest-api-for-country-state-city
-Die Corona--Informationen werden von der konstenlosen Unviversal-Rest-API : https://disease.sh/docs/
+- Die Länder-Informationen werden von der konstenlosen Unviversal-Rest-API : https://www.universal-tutorial.com/rest-apis/free-rest-api-for-country-state-city
+- Die Corona--Informationen werden von der konstenlosen Unviversal-Rest-API : https://disease.sh/docs/
 
 #Beispiel-Seiten
 
-Standardmäßig wird die Startseit bzw. die History-Seite (**ohne Angabe des Landes** [`/history`]) zur Historie-Seite mit **_Cameroon_** (`/history/Cameroon`) als Land-Angabe umgeleitet, wie es hier im Bild zu sehen ist.
+
+- Standardmäßig wird die Startseit bzw. die History-Seite (**ohne Angabe des Landes** [`/history`]) zur Historie-Seite mit **_Cameroon_** (`/history/Cameroon`) als Land-Angabe umgeleitet, wie es hier im Bild zu sehen ist.
 In der Historie Seite wird Meta-Informationen des Landes in Bezug auf Corona angezeigt und der graphische Verlauf der Corona-Fälle der letzten 30 Tage veranschaulicht.
 
 
 
-//Graphik
+![alt text](https://git.thm.de/dlns50/swtp_vorleistung/-/blob/da8e5517fc0b247a323a86095608c50e435d39c0/corona%20historie%20app%20images/startseite%20cmr.PNG?raw=true)
 
 
 
-Außerdem wird in der Seite **Gesamte Daten** (`/all`) alle verfügbaren Länder mit deren Gesamt-Infos bezogen auf Corona aufgelistet (Siehe unteres Bild). 
+- Außerdem wird in der Seite **Gesamte Daten** (`/all`) alle verfügbaren Länder mit deren Gesamt-Infos bezogen auf Corona aufgelistet (Siehe unteres Bild). 
 Bei Click auf den **Button Historie anzeigen** wird man auf die Seite der Historie für das gewählte Land wietergeleitet.
 
-// Bild Länder
-
+![alt text](https://git.thm.de/dlns50/swtp_vorleistung/-/blob/da8e5517fc0b247a323a86095608c50e435d39c0/corona%20historie%20app%20images/l%C3%A4nder.PNG?raw=true)
